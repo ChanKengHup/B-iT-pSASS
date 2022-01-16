@@ -1,0 +1,91 @@
+.personal {
+    padding-top: 30px;
+    background-color: #dcd1f3;
+    position: relative;
+    .personal__container {
+        padding: 0px 5%;
+        z-index: 3;
+
+        .personal__item {
+             margin-bottom: 40px;
+             transition: all 0.4s ease-in-out;
+             &:hover {
+                 box-shadow: 0 30px 30px -10px #00000033;
+                 
+             }
+             .personal__img {
+                 overflow: hidden;
+                 border-top-left-radius: 10px;
+                 border-top-right-radius: 10px;
+             &:hover {
+                 img {
+                     transform: scale3d(1.05,1.05,1.05);
+                    
+                 }
+             } 
+              img {
+                 border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                  display: block;
+                 margin: 0;
+                 line-height: 0;
+                 max-width: 100%;
+                 height: auto;
+                 transform: scale3d(1,1,1);
+                 transition: all 0.4s ease-in-out;
+                 
+                 }
+             }
+             .personal__content {
+                 background: $color-white;
+                 text-align: center;
+                 border-bottom-left-radius: 10px;
+                 border-bottom-right-radius: 10px;
+                 p {
+                     @include styleText($color-primary, 11.25px, $fw-2);
+                     padding: 26px 0 10px 0;
+                     margin: 0;
+                     
+                 }
+                 h4 {
+                     @include styleText($color-dark-2, 23.25px, $fw-3);
+                     margin: 0;
+                     padding-bottom: 14px;
+     
+                 }
+                 span {
+                     @include styleText($color-dark-1, $fs-4, $fw-1);
+                     font-family: 'Roboto', sans-serif;
+                     max-width: 71%;
+                     margin: auto;
+                     display: block;
+                     padding-bottom: 34px;
+                    
+                 }
+             }
+     
+         }
+    }
+    .personal__img-bottom {
+        position: absolute;
+       bottom: 0;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+             user-select: none;
+
+        }
+       
+    }
+}
+@media screen and (max-width:480px) {
+    .personal {
+        .personal__container {
+            .col-6{
+                max-width: 100%;
+            }
+        }
+    }
+}

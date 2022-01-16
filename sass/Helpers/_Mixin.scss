@@ -1,0 +1,15 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleBtn($bg, $pd-y, $pd-x, $border) {
+    background: $bg;
+    padding: $pd-y $pd-x;
+    border: $border
+}
+@mixin styleHoverBtn($bg, $color, $boder) {
+    background: $bg;
+    color: $color;
+    border: $boder;
+}

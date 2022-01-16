@@ -1,0 +1,109 @@
+.footer {
+    background-image: url(../../image//footer_background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 530px;
+    .footer__container {
+        padding: 100px 5%;
+        
+        .footer__item {
+            h2 {
+                @include styleText($color-white, 23.5px,$fw-2);
+                margin-bottom: 30px;
+
+            }
+            .footer__contact {
+                list-style: none;
+                @include styleText($color-white, $fs-2, $fw-1);
+                font-family: "Roboto",Arial,Helvetica,sans-serif;
+                li {
+                    margin-bottom: 14px;
+                    i {
+                        margin-right: 10px
+                    }
+                }
+            }
+            .footer__socials {
+                display: flex;
+                align-items: center;
+           
+                a {
+                    color: $color-white;
+                    font-size: 0.85rem;
+                    padding: 0 7px;
+                    display: block;
+                    &:hover {
+                        i {
+                            color: $color-dark-2;
+                        }
+                    }
+                }
+            }
+            .footer__list {
+                list-style: none;
+                @include styleText($color-white, $fs-2, $fw-1);
+                font-family: "Roboto",Arial,Helvetica,sans-serif;
+                li {
+                    margin-bottom: 20px;
+                    position: relative;
+                    &::before {
+                       content: "";
+                       position: absolute;
+                       width: 84%;
+                       height: 1px;
+                       background: #990171;
+                       bottom: -12px;
+                       left: 0;
+                    }
+                    i {
+                        margin-right: 10px
+                    }
+                    a {
+                     
+                    @include styleText($color-white, $fs-2, $fw-1);
+                    font-family: "Roboto",Arial,Helvetica,sans-serif;
+                    text-decoration: none;
+                    }
+
+                }
+            }
+            .footer__input {
+                padding-top: 18px;
+                input {
+                    border: 1px solid rgba(255,255,255,.1);
+                    border-radius: 50px;
+                    height: 3em;
+                    text-align: center;
+                    background: transparent;
+                    outline: none;
+                    width: 94%;
+                    &:focus {
+                        border: 1px solid rgba(255,255,255,1);
+                    }
+                    font-size: 1rem;
+                    &::placeholder {
+                       @include styleText($color-white, $fs-4, $fw-1);
+                    font-family: "Roboto",Arial,Helvetica,sans-serif;
+                       
+
+                    }
+                }
+                
+            }
+            .footer__btn {
+                width: 94%;
+                box-shadow: 0 0 0 3em #fff inset;
+                color: #181818;
+                border-radius: 50px;
+                text-align: center;
+                margin-top: 10px;
+                cursor: pointer;
+                @include styleText($color-dark-2, 12px,$fw-2);
+                @include styleBtn($color-white, 14px, 22px, 1px solid $color-white);
+                
+
+            }
+        }
+    }
+
+}

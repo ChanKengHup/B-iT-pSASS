@@ -1,0 +1,203 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background: transparent;
+    .navbar.background--white {
+        background-color: $color-white;
+    }
+    .navbar__logo.activeReposive {
+        display: none;
+    }
+    .navbar__logo.active {
+        display: none;
+    }
+    .navbar__logo {
+        img {
+            width: 80px;
+        }
+    }
+
+    .navbar__wrap {
+        display: flex;
+        margin-left: 20px;
+    }
+    .navbar__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+        position: relative;
+        margin-left: 154px;
+        li {
+            list-style: none;
+            padding-left: 50px;
+            cursor: pointer;
+            line-height: 60px;
+
+            &:hover {
+                a {
+                    color: $color-primary;
+                   
+                    &::before {
+                    transform: scale(1.5);
+
+                    }
+
+                }
+            }
+            a {
+                 position: relative;
+                text-decoration: none;
+               
+                @include styleText($color-dark-1,$fs-1,$fw-2);
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $color-primary;
+                    left: 40%;
+                    top: 38px;
+                    transform: scale(0);
+                    transition: 300ms ease all;
+                   
+                }
+            }
+           
+         
+        }
+        .active {
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $color-primary;
+                left: 28.2%;
+                 top: 60px;
+            }
+        }
+    }
+    .navbar__contact {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 0 3em #b61984 inset;
+        transition: 300ms ease all;
+        &:hover {
+            background: $color-white;
+            box-shadow: 0 0 0 1px #b61984 inset;
+            border: 1px solid $color-primary;
+            transform: translateY();
+            .navbar__phone {
+                color: $color-primary;
+            }
+        }
+        .navbar__phone {
+            
+            text-decoration: none;
+            @include styleText($color-white, $fs-2, 500);
+            
+            img {
+                width: 14px;
+                height: 14px;
+                color: $color-white;
+            }
+        }
+    }
+    .navbar__icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 40px;
+        margin-left: 14px;
+        
+        
+        a {
+            color: $color-dark-1;
+            font-size: 0.85rem;
+            padding: 0 5px;
+            display: block;
+            &:hover {
+                i {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    .navbar__bar {
+        display: none;
+    }
+    .navbar__close {
+        display: none;
+    }
+    .navbar__close.active {
+        display: block;
+    }
+    
+    
+}
+@media screen and (max-width: 1200px) {
+    .navbar {
+        margin: 0;
+        background: $color-white;
+        width: 100%;
+        padding: 0 32px;
+        float: left;
+        display: -webkit-box;
+        
+            background: $color-white;
+    
+        .navbar__logo.activeReposive {
+            display: block;
+        }
+        .navbar__bar {
+            display: block;
+            height: 48px;
+        margin: 8px 0.5em 0 0;
+        font-size: 1.5em;
+        cursor: pointer;
+        }
+        .navbar__bar.active {
+            display: none;
+        }
+        .navbar__menu,
+        .navbar__contact,
+         .navbar__icon{
+            display: none;
+        }
+        .navbar__logo img {
+            height: 50px;
+            width:50px;
+            float:right;
+        }
+        .navbar__logo.active {
+            display: none;
+        }
+        .navbar__close {
+            height: 48px;
+        margin: 8px 0.5em 0 0;
+        font-size: 1.5em;
+        cursor: pointer;
+        }
+    }
+    .carousel {
+        .carousel__heading {
+
+            h1 {
+                font-size: 47px;
+            }
+        }
+    }
+   
+}
