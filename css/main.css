@@ -722,6 +722,9 @@ html, body {
   .course .course__contact .course__form .contact__message .message__text textarea {
     width: 100%;
   }
+  .course .course__contact .course__form .contact__btn {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 780px) {
