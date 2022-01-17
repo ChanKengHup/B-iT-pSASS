@@ -663,7 +663,7 @@ html, body {
   -webkit-transition: 300ms ease all;
   transition: 300ms ease all;
   cursor: pointer;
-  margin: 36px 0 0px 30px;
+  margin: 36px 0 0px 0px;
 }
 
 .course .course__contact .course__form .contact__btn:hover {
