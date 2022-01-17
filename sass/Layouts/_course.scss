@@ -5,11 +5,25 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    .course__img {
-        width: 526px;
-        z-index: 21;
+    .course__container {
+        padding: 0 15px;
+    }
+    .course__imageButton {
+        position: absolute;
+        bottom: 0;
         img {
             width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    .course__img {
+        z-index: 21;
+        img {
+            display: block;
+            margin: 0;
+            line-height: 0;
+            max-width: 100%;
             height: auto;
         }
 
@@ -176,5 +190,33 @@
         display: block;
         user-select: none;
         }
+    }
+}
+@media screen and (max-width:992px) {
+    .course {
+        .course__contact {
+            margin: 0;
+            padding-top: 34px;
+            h2 {
+                @include styleText($color-dark-2,30px, $fw-3);
+                text-align: left;
+            }
+            .course__form {
+                .contact__info {
+                    justify-content: left;
+
+                    .name__input {
+
+                        input {
+                            
+                        }
+                    }
+                }
+                .contact__email {
+
+                }
+            }
+        }
+
     }
 }

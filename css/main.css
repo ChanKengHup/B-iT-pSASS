@@ -27,7 +27,11 @@ html, body {
 }
 
 .navbar .navbar.background--white {
-  background-color: #fff;
+  background: #fff;
+}
+
+.navbar .navbar.background--transparent {
+  background: transparent;
 }
 
 .navbar .navbar__logo.activeReposive {
@@ -462,13 +466,30 @@ html, body {
   position: relative;
 }
 
+.course .course__container {
+  padding: 0 15px;
+}
+
+.course .course__imageButton {
+  position: absolute;
+  bottom: 0;
+}
+
+.course .course__imageButton img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .course .course__img {
-  width: 526px;
   z-index: 21;
 }
 
 .course .course__img img {
-  width: 100%;
+  display: block;
+  margin: 0;
+  line-height: 0;
+  max-width: 100%;
   height: auto;
 }
 
@@ -673,11 +694,28 @@ html, body {
           user-select: none;
 }
 
+@media screen and (max-width: 992px) {
+  .course .course__contact {
+    margin: 0;
+    padding-top: 34px;
+  }
+  .course .course__contact h2 {
+    color: #191919;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .course .course__contact .course__form .contact__info {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
 .footer {
-  background-image: url(../../image//footer_background.jpg);
+  background-image: url(../../image/footer_background.jpg);
   background-size: cover;
   background-position: center;
-  height: 530px;
 }
 
 .footer .footer__container {
