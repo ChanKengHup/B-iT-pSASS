@@ -7,16 +7,10 @@
     position: relative;
     .course__container {
         padding: 0 15px;
+        position: relative;
+        z-index: 30;
     }
-    .course__imageButton {
-        position: absolute;
-        bottom: 0;
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    }
+   
     .course__img {
         z-index: 21;
         img {
@@ -183,7 +177,7 @@
         right: 0;
         left: 0;
         pointer-events: none;
-        z-index: 20;
+        z-index: -2;
         img {
         width: 100%;
         height: auto;
@@ -208,7 +202,7 @@
                     .name__input {
 
                         input {
-                            
+
                         }
                     }
                 }

@@ -2,10 +2,11 @@
     padding-top: 30px;
     background-color: #dcd1f3;
     position: relative;
+    margin-bottom: 90px;
     .personal__container {
         padding: 0px 5%;
-        z-index: 3;
-
+        z-index: 20;
+        position: relative;
         .personal__item {
              margin-bottom: 40px;
              transition: all 0.4s ease-in-out;

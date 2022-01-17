@@ -350,11 +350,13 @@ html, body {
   padding-top: 30px;
   background-color: #dcd1f3;
   position: relative;
+  margin-bottom: 90px;
 }
 
 .personal .personal__container {
   padding: 0px 5%;
-  z-index: 3;
+  z-index: 20;
+  position: relative;
 }
 
 .personal .personal__container .personal__item {
@@ -468,17 +470,8 @@ html, body {
 
 .course .course__container {
   padding: 0 15px;
-}
-
-.course .course__imageButton {
-  position: absolute;
-  bottom: 0;
-}
-
-.course .course__imageButton img {
-  width: 100%;
-  height: auto;
-  display: block;
+  position: relative;
+  z-index: 30;
 }
 
 .course .course__img {
@@ -681,7 +674,7 @@ html, body {
   right: 0;
   left: 0;
   pointer-events: none;
-  z-index: 20;
+  z-index: -2;
 }
 
 .course .course__imageButton img {
@@ -713,13 +706,17 @@ html, body {
 }
 
 .footer {
-  background-image: url(../../image/footer_background.jpg);
+  background-image: url(../image/footer_background.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .footer .footer__container {
   padding: 100px 5%;
+}
+
+.footer .footer__container .footer__item {
+  padding-bottom: 100px;
 }
 
 .footer .footer__container .footer__item h2 {
