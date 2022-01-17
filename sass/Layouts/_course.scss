@@ -25,7 +25,6 @@
     .course__contact {
         background: $color-white;
         box-shadow: 0 30px 30px -10px #00000033;
-        margin-left: 70px;
         border-radius: 10px;
         text-align: center;
         h2 {
@@ -36,19 +35,17 @@
 
         }
         .course__form {
-            padding-bottom: 66px;
+            padding: 0 30px 66px 30px;
             .contact__info {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-bottom: 14px;
                 .contact__name {
-                  
+                    flex: 1 0 50%;
+                    max-width: 50%;
                     padding-right: 1em;
                     position: relative;
-                    width: 171px;
-                    margin-right: 14px;
-
                     .name__icon {
                         position: absolute;
                         top: 14px;
@@ -75,7 +72,9 @@
                 
                 }
                 .contact__email {
-                  
+                    flex: 1 0 50%;
+                    max-width: 50%;
+                    padding-right: 1em;
                     position: relative;
                     .email__icon {
                         position: absolute;
@@ -113,7 +112,7 @@
                     .language__icon {
                         position: absolute;
                         top: 14px;
-                        left: 42px;
+                        left: 16px;
                         font-size: 12px;
 
                       color: $color-primary;
@@ -134,7 +133,7 @@
                 .messgae__icon {
                     position: absolute;
                     top: 15px;
-                    left: 40px;
+                    left: 16px;
                     color: $color-primary;
                     font-size: 12px;
                 } 
@@ -194,6 +193,7 @@
             h2 {
                 @include styleText($color-dark-2,30px, $fw-3);
                 text-align: left;
+                margin-left: 34px;
             }
             .course__form {
                 .contact__info {
@@ -202,15 +202,85 @@
                     .name__input {
 
                         input {
-
+                            width: 100%;
                         }
                     }
                 }
                 .contact__email {
+                    .email__input {
+                        input {
+                            width: 100%;
+                        }
 
+                    }
+
+                }
+                .contact__language {
+                    .language__input {
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+                .contact__message {
+                    .message__text {
+                        textarea {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
 
+    }
+}
+@media screen and (max-width:780px) {
+    .course {
+        .course__contact {
+            .course__form {
+                .contact__info {
+                    .contact__name {
+                        flex: 1 0 100%;
+                        max-width: 100%;
+                        margin: 1rem 0;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                    .contact__email {
+                      
+                            flex: 1 0 100%;
+                            max-width: 100%;
+                            input {
+                                width: 100%;
+                            }
+    
+                        
+    
+                    }
+                }
+               .contact__btn {
+                   max-width: 100%;
+                   margin-left: 0;
+               }
+            }
+        }
+    }
+}
+@media screen and (max-width:414px) {
+    .course {
+        .course__contact {
+            
+            .course__form {
+                .contact__language {
+                    .language__input {
+    
+                        select {
+                            padding: 8px 166px 8px 35px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
