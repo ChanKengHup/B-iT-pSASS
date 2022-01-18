@@ -54,11 +54,15 @@
                        bottom: -12px;
                        left: 0;
                     }
+                    
                     i {
                         margin-right: 10px
                     }
                     a {
-                     
+                        transition: all 0.2s ease;
+                        &:hover {
+                            opacity: 0.8;
+                        } 
                     @include styleText($color-white, $fs-2, $fw-1);
                     font-family: "Roboto",Arial,Helvetica,sans-serif;
                     text-decoration: none;
@@ -76,6 +80,7 @@
                     background: transparent;
                     outline: none;
                     width: 94%;
+                   
                     &:focus {
                         border: 1px solid rgba(255,255,255,1);
                     }
@@ -91,7 +96,6 @@
             }
             .footer__btn {
                 width: 94%;
-                box-shadow: 0 0 0 3em #fff inset;
                 color: #181818;
                 border-radius: 50px;
                 text-align: center;
@@ -99,7 +103,16 @@
                 cursor: pointer;
                 @include styleText($color-dark-2, 12px,$fw-2);
                 @include styleBtn($color-white, 14px, 22px, 1px solid $color-white);
-                
+                 transition: 300ms ease all;               
+                box-shadow: 0 0 0 3em #fff inset;
+                cursor: pointer;
+                &:hover {
+                    background: #AA017E;
+                    box-shadow: 0 0 0 1px #fff inset;
+                    border: 1px solid $color-white;
+                    
+                        color:$color-white;
+                }
 
             }
         }

@@ -312,7 +312,7 @@ html, body {
 
 @media screen and (max-width: 1200px) {
   .carousel {
-    padding: 90px 32px;
+    padding: 90px 0px;
   }
   .carousel .carousel__container .carousel__heading h1 {
     font-size: 47px;
@@ -334,6 +334,12 @@ html, body {
   }
   .carousel .carousel__container .carousel__img img {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .carousel {
+    padding: 90px 20px;
   }
 }
 
@@ -844,11 +850,17 @@ html, body {
 }
 
 .footer .footer__container .footer__item .footer__list li a {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: #fff;
   font-size: 13.5px;
   font-weight: 400;
   font-family: "Roboto",Arial,Helvetica,sans-serif;
   text-decoration: none;
+}
+
+.footer .footer__container .footer__item .footer__list li a:hover {
+  opacity: 0.8;
 }
 
 .footer .footer__container .footer__item .footer__input {
@@ -900,8 +912,6 @@ html, body {
 
 .footer .footer__container .footer__item .footer__btn {
   width: 94%;
-  -webkit-box-shadow: 0 0 0 3em #fff inset;
-          box-shadow: 0 0 0 3em #fff inset;
   color: #181818;
   border-radius: 50px;
   text-align: center;
@@ -913,6 +923,19 @@ html, body {
   background: #fff;
   padding: 14px 22px;
   border: 1px solid #fff;
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+  -webkit-box-shadow: 0 0 0 3em #fff inset;
+          box-shadow: 0 0 0 3em #fff inset;
+  cursor: pointer;
+}
+
+.footer .footer__container .footer__item .footer__btn:hover {
+  background: #AA017E;
+  -webkit-box-shadow: 0 0 0 1px #fff inset;
+          box-shadow: 0 0 0 1px #fff inset;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .btn-primary {
